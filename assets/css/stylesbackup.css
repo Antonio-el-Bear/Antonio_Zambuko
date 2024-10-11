@@ -1,0 +1,78 @@
+#hero p span {
+    color: lightcoral;
+    letter-spacing: 1px;
+  }
+                /*#hero: This targets an element with the ID "hero."
+                p: This targets paragraph elements that are descendants 
+                of the element with the ID "hero."span:This targets 
+                <span> elements that are descendants of paragraphs within 
+                the element with the ID "hero." The rules inside the selector 
+                are applying styles to the targeted <span> elements:
+
+                color: #0563bb;: This sets the text color to a specific shade of blue (#0563bb).
+                letter-spacing: 1px;: This adds a 1-pixel spacing between the letters.
+                If you want to make each word have its own color, you can use the 
+                :nth-child() pseudo-class to select specific <span> elements within 
+                the paragraph and apply different colors. Here's an example:*/
+
+
+                @media (max-width: 992px) {
+                    #hero {
+                      text-align: center;
+                    }
+                  
+                    #hero h1,
+                    #hero p,
+                    #hero .social-links {
+                      text-align: center;
+                    }
+                  
+                    #hero h1 {
+                      font-size: 32px;
+                      line-height: 36px;
+                    }
+                  
+                    #hero p {
+                      margin-top: 10px;
+                      font-size: 20px;
+                      line-height: 24px;
+                    }
+                  
+                    #hero .social-links a {
+                      display: block; /* Ensures each link takes full width */
+                      margin: 10px auto; /* Centers the links horizontally with some spacing */
+                    }
+                  }
+
+                  
+
+
+
+
+
+
+
+
+
+                  #hero .social-links a:hover {
+                    color: royalblue;
+                  }
+                  
+                  @media (max-width: 992px) {
+                    #hero {
+                      text-align: center;
+                    }
+                  
+                    #hero h1 {
+                      font-size: 32px;
+                      line-height: 36px;
+                    }
+                  
+                    #hero p {
+                      margin-top: 10px;
+                      font-size: 20px;
+                      line-height: 24px;
+                    }
+                  }/*This media query targets screen widths up to 992 pixels. When the screen width is 992 pixels or less:
+The #hero element is centered using text-align: center;.
+The font size and line height of the h1 and p elements inside #hero are adjusted for better readability on smaller screens.*/
