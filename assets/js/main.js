@@ -261,4 +261,9 @@
    */
   new PureCounter();
 
+  /**Mini slide */
+  // Initialize the main slider
+
+
+
 })()
