@@ -409,8 +409,16 @@ section {
   padding-top: 40px;
 
   .portfolio-details-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
     img {
-      width: 100%;
+      width: auto;
+      max-width: 100%;
+      margin: 0 auto;
+
     }
     .swiper-pagination {
       margin-top: 20px;
@@ -419,7 +427,7 @@ section {
       .swiper-pagination-bullet {
         width: 12px;
         height: 12px;
-        background-color: #fff;
+        background-color: #f2f2f2;
         opacity: 1;
         border: 1px solid $primary;
       }
