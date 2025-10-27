@@ -135,15 +135,18 @@
    */
   const typed = select('.typed')
   if (typed) {
-    let typed_strings = typed.getAttribute('data-typed-items')
-    typed_strings = typed_strings.split(',')
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
-    });
+    // split the data-typed-items and trim whitespace from each item
+    let typed_strings = typed.getAttribute('data-typed-items') || ''
+    typed_strings = typed_strings.split(',').map(s => s.trim()).filter(Boolean)
+    if (typeof Typed !== 'undefined' && typed_strings.length) {
+      new Typed('.typed', {
+        strings: typed_strings,
+        loop: true,
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 2000
+      });
+    }
   }
 
   /**
