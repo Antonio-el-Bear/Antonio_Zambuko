@@ -1008,6 +1008,54 @@ section {
 
 .testimonials .testimonial-item {
   text-align: center;
+
+/* Package accent colors for Services cards */
+.package-bronze { /* Bronze */
+  --pkg-accent: #cd7f32;
+}
+.package-silver { /* Silver */
+  --pkg-accent: #c0c0c0;
+}
+.package-gold { /* Gold */
+  --pkg-accent: #d4af37;
+}
+.services .card.package-bronze,
+.services .card.package-silver,
+.services .card.package-gold {
+  border-top: 4px solid var(--pkg-accent);
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.services .card.package-bronze:hover,
+.services .card.package-silver:hover,
+.services .card.package-gold:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+.services .card.package-bronze .card-title,
+.services .card.package-bronze .text-success {
+  color: var(--pkg-accent);
+}
+.services .card.package-silver .card-title,
+.services .card.package-silver .text-success {
+  color: var(--pkg-accent);
+}
+.services .card.package-gold .card-title,
+.services .card.package-gold .text-success {
+  color: var(--pkg-accent);
+}
+
+/* Small badge accent */
+.services .card .badge-accent {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+}
+.package-bronze .badge-accent { background: var(--pkg-accent); }
+.package-silver .badge-accent { background: var(--pkg-accent); color: #222; }
+.package-gold .badge-accent { background: var(--pkg-accent); }
 }
 
 .testimonials .testimonial-item .testimonial-img {

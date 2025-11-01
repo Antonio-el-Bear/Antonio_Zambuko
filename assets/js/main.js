@@ -267,6 +267,33 @@
   /**Mini slide */
   // Initialize the main slider
 
+  /**
+   * Quote modal wiring: open bootstrap modal and prefill package/subject
+   */
+  window.addEventListener('load', () => {
+    const modalEl = document.getElementById('quoteModal')
+    if (!modalEl) return
+    // bootstrap Modal (requires bootstrap.bundle.js)
+    let quoteModal = null
+    try {
+      quoteModal = new bootstrap.Modal(modalEl)
+    } catch (e) {
+      // bootstrap not available
+      return
+    }
+
+    const packageInput = document.getElementById('quotePackage')
+    const subjectInput = document.getElementById('quoteSubject')
+    document.querySelectorAll('.get-quote').forEach(btn => {
+      btn.addEventListener('click', (ev) => {
+        const pkg = btn.getAttribute('data-package') || ''
+        if (packageInput) packageInput.value = pkg
+        if (subjectInput) subjectInput.value = pkg ? `Quote request: ${pkg}` : 'Quote request'
+        quoteModal.show()
+      })
+    })
+  })
+
 
 
 })()
